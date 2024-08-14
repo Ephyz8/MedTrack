@@ -5,8 +5,8 @@ class JobCard(models.Model):
     Model representing a job card for documenting repair or maintenance tasks 
     for medical equipment.
     """
-    job_number = models.IntegerField(verbose_name="Job Number")
-    request_number = models.IntegerField(verbose_name="Request Number")
+    job_number = models.AutoField(primary_key=True, verbose_name="Job Number")
+    request_number = models.PositiveIntegerField(verbose_name="Request Number", unique=True)
     reporting_date = models.DateField(verbose_name="Reporting Date")
     department = models.CharField(max_length=255, verbose_name="Department")
     ward = models.CharField(max_length=255, verbose_name="Ward")
