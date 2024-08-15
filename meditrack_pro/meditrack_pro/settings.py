@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'inventory',
     'fault_reporting',
     'daily_logs',
-    'user',
+    'authuser',
+    
 ]
 
 REST_FRAMEWORK = {
@@ -117,7 +118,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-AUTH_USER_MODEL = 'user.CustomUser'
+# AUTH_USER_MODEL = 'authuser.User'
 
 
 # Internationalization
